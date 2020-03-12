@@ -16,11 +16,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var taskGoalName = editTextName.text
-
-        button_confirm.setOnClickListener {
-            editTextName.text.clear()
-        }
+//        var taskGoalName = editTextName.text
+//
+//        button_confirm.setOnClickListener {
+//            editTextName.text.clear()
+//        }
     }
 
 }
