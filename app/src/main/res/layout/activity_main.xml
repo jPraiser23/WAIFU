@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_twocolor"
+    android:background="@drawable/bg_twoColor"
     tools:layout_editor_absoluteY="25dp">
 
     <LinearLayout
@@ -14,11 +14,11 @@
         android:orientation="vertical">
 
         <RelativeLayout
-            android:layout_marginTop="32dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="20dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -34,6 +34,7 @@
                 android:layout_alignWithParentIfMissing="false"
                 android:layout_alignParentLeft="true"
                 android:layout_centerInParent="true"
+                android:clickable="true"
                 android:contentDescription="@string/todo"
                 android:src="@drawable/menu_btn" />
 
@@ -43,6 +44,7 @@
                 android:layout_alignWithParentIfMissing="false"
                 android:layout_alignParentRight="true"
                 android:layout_centerInParent="true"
+                android:clickable="true"
                 android:contentDescription="@string/todo"
                 android:src="@drawable/more_btn" />
 
@@ -55,7 +57,7 @@
             android:columnCount="1"
             android:columnOrderPreserved="false"
             android:paddingTop="100dp"
-            android:rowCount="5">
+            android:rowCount="7">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
@@ -63,22 +65,16 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_margin="12dp"
+                app:cardBackgroundColor="#F2DD2D59"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="6dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="95dp"
                     android:gravity="center"
                     android:orientation="vertical"
                     android:padding="3dp">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        android:adjustViewBounds="false"
-                        android:cropToPadding="false"
-                        android:src="@drawable/rectangle_card" />
 
                 </LinearLayout>
 
@@ -90,20 +86,16 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_margin="12dp"
+                app:cardBackgroundColor="#F2DD2D59"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="6dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="95dp"
                     android:gravity="center"
                     android:orientation="vertical"
                     android:padding="3dp">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        android:src="@drawable/rectangle_card" />
 
                 </LinearLayout>
 
@@ -115,22 +107,16 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_margin="12dp"
+                app:cardBackgroundColor="#F2DD2D59"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="6dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="95dp"
                     android:gravity="center"
                     android:orientation="vertical"
                     android:padding="3dp">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        android:adjustViewBounds="false"
-                        android:cropToPadding="false"
-                        android:src="@drawable/rectangle_card" />
 
                 </LinearLayout>
 
@@ -142,33 +128,26 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_margin="12dp"
+                app:cardBackgroundColor="#F2DD2D59"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="6dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="95dp"
                     android:gravity="center"
                     android:orientation="vertical"
                     android:padding="3dp">
 
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        android:adjustViewBounds="false"
-                        android:cropToPadding="false"
-                        android:src="@drawable/rectangle_card" />
-
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
-
 
 
 
         </GridLayout>
 
     </LinearLayout>
-    
+
 </ScrollView>
 
