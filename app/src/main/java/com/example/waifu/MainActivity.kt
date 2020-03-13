@@ -1,5 +1,6 @@
 package com.example.waifu
 
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -16,11 +17,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-//        var taskGoalName = editTextName.text
-//
-//        button_confirm.setOnClickListener {
-//            editTextName.text.clear()
-//        }
     }
+
+    fun goToCreateNewTask(view: View) {
+        val intent = Intent(this, create_new_task::class.java)
+        startActivity(intent)
+    }
+
 
 }

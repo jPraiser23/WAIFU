@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_twoColor"
+    android:background="@drawable/bg_neon"
     tools:layout_editor_absoluteY="25dp">
 
     <LinearLayout
@@ -50,13 +49,37 @@
 
         </RelativeLayout>
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="March 13"
+                android:textColor="#000000"
+                android:textSize="27sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="2020"
+                android:textColor="#000000"
+                android:textSize="27sp" />
+        </RelativeLayout>
+
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:alignmentMode="alignMargins"
             android:columnCount="1"
             android:columnOrderPreserved="false"
-            android:paddingTop="100dp"
+            android:paddingTop="15dp"
             android:rowCount="7">
 
             <androidx.cardview.widget.CardView
@@ -83,7 +106,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
+                android:layout_rowWeight="2"
                 android:layout_columnWeight="1"
                 android:layout_margin="12dp"
                 app:cardBackgroundColor="#F2DD2D59"
@@ -142,12 +165,34 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
-
 
 
         </GridLayout>
 
-    </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="20dp"
+            android:onClick="newScreen">
 
+            <Button
+                android:id="@+id/newTask_btn"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:background="@drawable/add_btn_correct"
+                android:clickable="true"
+                android:contentDescription="create new task"
+                android:onClick="goToCreateNewTask"
+                android:textColor="#7EEFCC" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
 </ScrollView>
 

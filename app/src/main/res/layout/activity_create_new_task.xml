@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_neon"
+    tools:layout_editor_absoluteY="25dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Create New Task"
+                android:textColor="#000000"
+                android:textSize="25sp" />
+
+            <Button
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignWithParentIfMissing="false"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:clickable="true"
+                android:contentDescription="@string/todo"
+                android:background="@drawable/back_btn"
+                android:onClick="goBackToHome"/>
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignWithParentIfMissing="false"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:clickable="true"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/more_btn" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="New Task"
+                android:textColor="#000000"
+                android:textSize="38sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alignmentMode="alignMargins"
+            android:orientation="horizontal"
+            android:paddingTop="25dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:layout_gravity="left"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                app:cardBackgroundColor="#F2DD2D59"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="High Priority"
+                    android:layout_margin="8dp"
+                    android:gravity="center"
+                    android:textAlignment="center"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:layout_gravity="center"
+                android:layout_centerHorizontal="true"
+                app:cardBackgroundColor="#F2DD2D59"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="High Priority"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:textAlignment="center"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="20dp"
+                app:cardBackgroundColor="#F2DD2D59"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                android:layout_alignParentRight="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Low Priority"
+                    android:layout_margin="8dp"
+                    android:gravity="center"
+                    android:textAlignment="center"/>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </RelativeLayout>
+
+
+        <!--        <RelativeLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="59dp"-->
+        <!--            android:layout_marginLeft="20dp"-->
+        <!--            android:layout_marginTop="32dp"-->
+        <!--            android:layout_marginRight="20dp">-->
+
+        <!--            <Button-->
+        <!--                android:layout_width="55dp"-->
+        <!--                android:layout_height="55dp"-->
+        <!--                android:layout_alignParentRight="true"-->
+        <!--                android:layout_alignParentBottom="true"-->
+        <!--                android:layout_centerInParent="true"-->
+        <!--                android:background="@drawable/add_btn"-->
+        <!--                android:clickable="true"-->
+        <!--                android:contentDescription="create new task"-->
+        <!--                android:textColor="#7EEFCC" />-->
+
+        <!--        </RelativeLayout>-->
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
