@@ -5,7 +5,8 @@ data class Task
     var taskName: String,
     var taskDescription: String,
     var taskPriorityLevel: Int,
-    var taskLocation: Int//,
+    var taskLocation: Int,
+    var notificationSettingsEnabled: Boolean
 //    var taskColor: String, //TODO potentially do color changing logic for priority level somewhere else other than this DTO
 )
 {
@@ -14,7 +15,7 @@ data class Task
     //-------------------------------------------------------------
     override fun toString(): String //overrides toString() to give the task's name, priority level, and location on the board
     {
-        return taskName + " (Priority Level: " + taskPriorityLevel + ", Location: " + taskLocation + ") "
+        return taskName + " (Priority Level: " + taskPriorityLevel + ", Location: " + taskLocation + ") ";
     }
 
     //-------------------------------------------------------------
@@ -38,6 +39,11 @@ data class Task
     fun getTaskLocation(task: Task): Int
     {
         return task.taskLocation;
+    }
+
+    fun getNotificationSettings(task: Task): Boolean
+    {
+        return task.notificationSettingsEnabled;
     }
 
     //-------------------------------------------------------------
@@ -77,5 +83,14 @@ data class Task
             task.taskLocation = newTaskLocation;
         }
         return task.taskLocation;
+    }
+
+    fun setNotificationSettings(task: Task, changedNotificationSettings: Boolean): Boolean
+    {
+        if(task.notificationSettingsEnabled != changedNotificationSettings)
+        {
+            task.notificationSettingsEnabled = changedNotificationSettings;
+        }
+        return task.notificationSettingsEnabled;
     }
 }
