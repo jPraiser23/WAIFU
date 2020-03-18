@@ -2,7 +2,7 @@ package com.example.waifu.dto
 
 import java.util.*
 
-data class NotificationManager
+data class NotificationsManager
 (
     var notificationMessage: String,
     var notificationFrequency: Timer
