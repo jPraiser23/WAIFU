@@ -1,22 +1,20 @@
-package com.example.waifu
+package com.example.waifu.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.example.waifu.R
 
-class MainActivity : AppCompatActivity() {
+class CreateNewTaskActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
+        setContentView(R.layout.activity_create_new_task)
     }
 
-    fun goToCreateNewTask(view: View) {
-        val intent = Intent(this, CreateNewTaskActivity::class.java)
+    fun goBackToHome(view: View) {
+        val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
     }
-
-
 }
