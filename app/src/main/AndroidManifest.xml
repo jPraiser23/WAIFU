@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <!--TODO look into getting log in screen to display first, athenticate and open MainActivity-->
+        <!--TODO look into getting log in screen to display first, authenticate and open MainActivity-->
         <!--uncomment these blocks to have login screen as starting screen-->
 
         <!--starting activity on start up-->
