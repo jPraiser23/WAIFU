@@ -9,7 +9,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CreateNewTaskActivity"></activity>
+
+        <!--TODO look into getting log in screen to display first, athenticate and open MainActivity-->
+        <!--uncomment these blocks to have login screen as starting screen-->
+
+        <!--starting activity on start up-->
+        <!--<activity
+            android:name=".ui.login.LoginActivity"
+            android:label="@string/title_activity_login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>-->
+
+        <!--main activity after log in-->
+        <!--<activity android:name=".MainActivity" />-->
+
+        <!--create task activity-->
+        <!--<activity android:name=".CreateNewTaskActivity" />-->
+
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:label="@string/title_activity_login"></activity>
+        <activity android:name=".CreateNewTaskActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
