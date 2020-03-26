@@ -7,5 +7,6 @@
     <string name="task">Task</string>
     <string name="todo">TODO</string>
     <string name="sign_in">Sign In</string>
-    <string name="welcome">"Welcome !"</string> <!-- TODO add name to string (get from Firebase) -->
+    <!-- TODO look into deleting below. It may be superfluous -->
+    <!-- <string name="welcome">"Welcome !"</string> &lt;!&ndash; TODO add name to string (get from Firebase) &ndash;&gt;-->
 </resources>
