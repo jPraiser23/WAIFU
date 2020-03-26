@@ -10,6 +10,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import kotlinx.android.synthetic.main.activity_login.*
 
+//Firebase Gmail Account: projectteamwaifu@gmail.com
 class LoginActivity : AppCompatActivity()
 {
     private val AUTH_REQUEST_CODE = 2002; //set for firebase authentication logic
@@ -19,41 +20,26 @@ class LoginActivity : AppCompatActivity()
     {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-        tvLoginStatus.setText(""); //set login status to an empty string when the app is started up
+        btnLogin.setOnClickListener()
+        {
+            login()
+        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) //watch videos to expand upon this more
     {
         super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == AUTH_REQUEST_CODE)
+        if (requestCode == AUTH_REQUEST_CODE) //called when the user submits login information
         {
             user = FirebaseAuth.getInstance().currentUser //gets user
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent) //brings user to the main activity screen
         }
     }
 
-    //TODO replace this function with firebase authentication in the future, or integrate the two
-    private fun loginHandler(view: View) //handles logins
+    private fun login()//pulls up firebase login screen UI
     {
         var providers = arrayListOf(AuthUI.IdpConfig.EmailBuilder().build())
         startActivityForResult(AuthUI.getInstance().createSignInIntentBuilder().setAvailableProviders(providers).build(), AUTH_REQUEST_CODE)
-//        var successfulLogin = false
-//        if
-//        (
-//            txtUserName.text.toString().equals("admin") //checks to see if the test username is entered
-//            && txtPassword.text.toString().equals("WAIFU") //checks to see if the test password is entered
-//        )
-//        {
-//            //if login is successful, go to the main activity screen
-//            successfulLogin = true
-//            val intent = Intent(this, MainActivity::class.java)
-//            startActivity(intent) //brings user to the main activity screen
-//            tvLoginStatus.setText("")
-//        }
-//        else
-//        {
-//            //otherwise, display error message
-//            successfulLogin = false
-//            tvLoginStatus.setText("Login was unsuccessful. Please try this again.")
-//        }
     }
 }
