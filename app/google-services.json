@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "303854618693",
+    "firebase_url": "https://waifu-55129.firebaseio.com",
+    "project_id": "waifu-55129",
+    "storage_bucket": "waifu-55129.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:303854618693:android:f174a92d6545412249bb2c",
+        "android_client_info": {
+          "package_name": "com.example.waifu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "303854618693-au3viu19hsocfm87jrund45mdg9eukc9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.waifu",
+            "certificate_hash": "462b0e86d70c8682ffc4d9555edcd257bb282108"
+          }
+        },
+        {
+          "client_id": "303854618693-gvj5d9ri1gu8v7sqd94m2kbge5gc8pa2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtUJxV9YNJIujjn-EwpfTXgEI6p1E5ht0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "303854618693-gvj5d9ri1gu8v7sqd94m2kbge5gc8pa2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
