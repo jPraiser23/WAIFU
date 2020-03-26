@@ -8,20 +8,80 @@
     tools:context=".ui.LoginActivity">
     <LinearLayout
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_margin = "10dp"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id = "@+id/tvWelcome"
+            android:text = "@string/welcome_message" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id = "@+id/tvSignIn"
-            android:text = "Welcome to WAIFU! Please click the button below to sign in!" />
+            android:text = "@string/login_screen_message" />
         <Button
             android:id="@+id/btnLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Login"
+            android:text="Sign In"
             android:textAllCaps="false" />
     </LinearLayout>
 </RelativeLayout>
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="fill_parent"-->
+<!--    android:layout_height="fill_parent"-->
+<!--    android:background="@drawable/bg_neon"-->
+<!--    tools:layout_editor_absoluteY="25dp">-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical">-->
+
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="20dp"-->
+<!--            android:layout_marginTop="32dp"-->
+<!--            android:layout_marginRight="20dp">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/tvWelcome"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                android:gravity="center"-->
+<!--                android:text="@string/welcome_message"-->
+<!--                android:textColor="#000000"-->
+<!--                android:textSize="27sp" />-->
+<!--        />-->
+<!--            <TextView-->
+<!--                android:id="@+id/tvSignIn"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                android:gravity="center"-->
+<!--                android:text="@string/login_screen_message"-->
+<!--                android:textColor="#000000"-->
+<!--                android:textSize="27sp" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/btnLogin"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:backgroundTint="#7EEFCC"-->
+<!--                android:text="@string/sign_in"-->
+<!--                android:textAllCaps="false"-->
+<!--                android:textColor="#000000" />-->
+<!--        </RelativeLayout>-->
+<!--    </LinearLayout>-->
+<!--</RelativeLayout>-->
