@@ -4,9 +4,9 @@ data class Task
 (
     var taskName: String,
     var taskDescription: String,
-    var taskPriorityLevel: Int,
-    var taskLocation: Int,
-    var notificationSettingsEnabled: Boolean
+    var taskPriorityLevel: Int//,
+/*    var taskLocation: Int,
+    var notificationSettingsEnabled: Boolean*/
 //    var taskColor: String, //TODO potentially do color changing logic for priority level somewhere else other than this DTO
 )
 {
@@ -15,7 +15,8 @@ data class Task
     //-------------------------------------------------------------
     override fun toString(): String //overrides toString() to give the task's name, priority level, and location on the board
     {
-        return taskName + " (Priority Level: " + taskPriorityLevel + ", Location: " + taskLocation + ") ";
+        /*return taskName + " (Priority Level: " + taskPriorityLevel + ", Location: " + taskLocation + ") ";*/
+        return taskName + " (Priority Level: " + taskPriorityLevel + ") ";
     }
 
     //-------------------------------------------------------------
@@ -36,7 +37,7 @@ data class Task
         return task.taskPriorityLevel;
     }
 
-    fun getTaskLocation(task: Task): Int
+  /*  fun getTaskLocation(task: Task): Int
     {
         return task.taskLocation;
     }
@@ -44,7 +45,7 @@ data class Task
     fun getNotificationSettings(task: Task): Boolean
     {
         return task.notificationSettingsEnabled;
-    }
+    }*/
 
     //-------------------------------------------------------------
     //setters
@@ -76,7 +77,7 @@ data class Task
         return task.taskPriorityLevel;
     }
 
-    fun setTaskLocation(task: Task, newTaskLocation: Int): Int
+/*    fun setTaskLocation(task: Task, newTaskLocation: Int): Int
     {
         if((newTaskLocation != null) && (newTaskLocation > 0) && (newTaskLocation != task.taskLocation))
         {
@@ -92,5 +93,5 @@ data class Task
             task.notificationSettingsEnabled = changedNotificationSettings;
         }
         return task.notificationSettingsEnabled;
-    }
+    }*/
 }

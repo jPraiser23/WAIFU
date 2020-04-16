@@ -24,7 +24,7 @@ data class NotificationsManager
     //-------------------------------------------------------------
     //setters
     //-------------------------------------------------------------
-    fun setNotificationMessage(task: Task, newNotificationMessage: String): String {
+    /*fun setNotificationMessage(task: Task, newNotificationMessage: String): String {
         if ((task.notificationSettingsEnabled) && (newNotificationMessage != null) && (newNotificationMessage.isEmpty()) && (!(newNotificationMessage.equals(
                 task.taskDescription
             )))
@@ -41,5 +41,5 @@ data class NotificationsManager
             notificationFrequency = newNotificationFrequency
         }
         return notificationFrequency
-    }
+    }*/
 }
