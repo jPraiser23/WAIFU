@@ -4,7 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.ArrayAdapter
 import android.widget.RadioGroup
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.waifu.R
 import com.example.waifu.dto.Task
@@ -22,7 +24,11 @@ class CreateNewTaskActivity : AppCompatActivity()
         setContentView(R.layout.activity_create_new_task)
 
         viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
+        viewModel.tasks.observe(this, Observer {
+            //TODO //spinner population retrofit required (only designed to work with spinner) /update logic
+            //tasks -> tskTasks.setAdapter(ArrayAdapter(context!!, R.layout.support_simple_spinner_dropdown_item, tasks))
 
+        })
         btnSave.setOnClickListener {
             saveTask()
         }
@@ -60,6 +66,5 @@ class CreateNewTaskActivity : AppCompatActivity()
     {
         var task = Task(etTaskName.text.toString(), etTaskDescription.text.toString(), determinePriorityLevel(), taskId.toString())
         viewModel.save(task)
-
     }
 }

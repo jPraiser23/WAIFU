@@ -63,22 +63,4 @@ data class Task
         }
         return task.taskPriorityLevel;
     }
-
-/*    fun setTaskLocation(task: Task, newTaskLocation: Int): Int
-    {
-        if((newTaskLocation != null) && (newTaskLocation > 0) && (newTaskLocation != task.taskLocation))
-        {
-            task.taskLocation = newTaskLocation;
-        }
-        return task.taskLocation;
-    }
-
-    fun setNotificationSettings(task: Task, changedNotificationSettings: Boolean): Boolean
-    {
-        if(task.notificationSettingsEnabled != changedNotificationSettings)
-        {
-            task.notificationSettingsEnabled = changedNotificationSettings;
-        }
-        return task.notificationSettingsEnabled;
-    }*/
 }
