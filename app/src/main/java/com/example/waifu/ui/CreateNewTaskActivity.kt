@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.RadioGroup
+import androidx.lifecycle.ViewModelProviders
 import com.example.waifu.R
 import com.example.waifu.dto.Task
 import com.example.waifu.PriorityLevel
@@ -14,11 +15,13 @@ import kotlinx.android.synthetic.main.activity_create_new_task.view.*
 class CreateNewTaskActivity : AppCompatActivity()
 {
 
-    var enteredPriorityLevel = PriorityLevel.HIGH.priorityLevelNumber;
-
+    var enteredPriorityLevel = PriorityLevel.HIGH.priorityLevelNumber
+    private lateinit var viewModel: MainViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_new_task)
+
+        viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
 
         btnSave.setOnClickListener {
             saveTask()
@@ -56,6 +59,7 @@ class CreateNewTaskActivity : AppCompatActivity()
     private fun saveTask()
     {
         var task = Task(etTaskName.text.toString(), etTaskDescription.text.toString(), determinePriorityLevel())
+        viewModel.save(task)
 
     }
 }
