@@ -15,20 +15,20 @@
             android:orientation="vertical"
             android:padding="3dp">
         <TextView
-            android:id="@+id/txtTaskName"
+            android:id="@+id/lblTaskName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="1dp"
             android:textSize="18sp"
             android:textColor="000000"/>
         <TextView
-            android:id="@+id/txtTaskDescription"
+            android:id="@+id/lblTaskDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="1dp"
             android:textColor="000000"/>
         <TextView
-            android:id="@+id/txtTaskPriorityLevel"
+            android:id="@+id/lblTaskPriorityLevel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="1dp"

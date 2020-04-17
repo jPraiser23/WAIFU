@@ -24,11 +24,7 @@ class CreateNewTaskActivity : AppCompatActivity()
         setContentView(R.layout.activity_create_new_task)
 
         viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
-        viewModel.tasks.observe(this, Observer {
-            //TODO //spinner population retrofit required (only designed to work with spinner) /update logic
-            //tasks -> tskTasks.setAdapter(ArrayAdapter(context!!, R.layout.support_simple_spinner_dropdown_item, tasks))
 
-        })
         btnSave.setOnClickListener {
             saveTask()
         }
