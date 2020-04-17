@@ -58,7 +58,7 @@ class CreateNewTaskActivity : AppCompatActivity()
     }
     private fun saveTask()
     {
-        var task = Task(etTaskName.text.toString(), etTaskDescription.text.toString(), determinePriorityLevel())
+        var task = Task(etTaskName.text.toString(), etTaskDescription.text.toString(), determinePriorityLevel(), taskId.toString())
         viewModel.save(task)
 
     }

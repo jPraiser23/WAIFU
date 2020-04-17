@@ -18,13 +18,13 @@ class MainViewModel : ViewModel()
 
     fun save(task: Task)
     {
-        firestore.collection("tasks")
-            .document()
-            .set(task)
-            .addOnSuccessListener {
+        val document = firestore.collection("tasks").document()
+        task.taskId = document.id
+        val set = document.set(task)
+            set.addOnSuccessListener {
                 Log.d("Firebase", "Document saved")
             }
-            .addOnFailureListener() {
+            set.addOnFailureListener() {
                 Log.d("Firebase", "Save failed")
             }
     }
