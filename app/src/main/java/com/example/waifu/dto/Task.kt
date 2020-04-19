@@ -1,96 +1,69 @@
 package com.example.waifu.dto
 
-data class Task
-(
-    var taskName: String,
-    var taskDescription: String,
-    var taskPriorityLevel: Int,
-    var taskLocation: Int,
-    var notificationSettingsEnabled: Boolean
-//    var taskColor: String, //TODO potentially do color changing logic for priority level somewhere else other than this DTO
-)
+import com.example.waifu.PriorityLevel
+
+data class Task (var taskName: String = "", var taskDescription: String = "", var taskPriorityLevel: Int = 0, var taskId: String = "")
 {
-    //-------------------------------------------------------------
-    //override methods
-    //-------------------------------------------------------------
     override fun toString(): String //overrides toString() to give the task's name, priority level, and location on the board
     {
-        return taskName + " (Priority Level: " + taskPriorityLevel + ", Location: " + taskLocation + ") ";
+        return taskName + " (Priority Level: " + taskPriorityLevel + ") ";
     }
 
-    //-------------------------------------------------------------
-    //getters
-    //-------------------------------------------------------------
-    fun getTaskName(task: Task): String
+    @JvmName("getTaskNameFunKotlin")
+    fun getTaskName(): String
     {
-        return task.taskName;
+        return taskName
     }
 
-    fun getTaskDescription (task: Task): String
+    @JvmName("getTaskDescriptionKotlin")
+    fun getTaskDescription(): String
     {
-        return task.taskDescription;
+        return taskDescription
     }
 
-    fun getTaskPriorityLevel(task: Task): Int
+    @JvmName("getTaskPriorityLevelKotlin")
+    fun getTaskPriorityLevel(): Int
     {
-        return task.taskPriorityLevel;
+        return taskPriorityLevel
     }
 
-    fun getTaskLocation(task: Task): Int
+    fun getTaskPriorityLevelMessage(): String
     {
-        return task.taskLocation;
-    }
-
-    fun getNotificationSettings(task: Task): Boolean
-    {
-        return task.notificationSettingsEnabled;
-    }
-
-    //-------------------------------------------------------------
-    //setters
-    //-------------------------------------------------------------
-    fun setTaskName(task: Task, newTaskName: String): String
-    {
-        if((newTaskName != null) && (newTaskName.isEmpty()) && (!(newTaskName.equals(task.taskName))))
+        var taskPriorityLevelMessage = ""
+        if(taskPriorityLevel == PriorityLevel.HIGH.priorityLevelNumber)
         {
-            task.taskName = newTaskName;
+            taskPriorityLevelMessage = "High"
         }
-        return task.taskName;
+        else if(taskPriorityLevel == PriorityLevel.MEDIUM.priorityLevelNumber)
+        {
+            taskPriorityLevelMessage = "Medium"
+        }
+        else if(taskPriorityLevel == PriorityLevel.HIGH.priorityLevelNumber)
+        {
+            taskPriorityLevelMessage = "Low"
+        }
+        else
+        {
+            taskPriorityLevelMessage = "Priority Level Not Set"
+        }
+        return taskPriorityLevelMessage
     }
 
-    fun setTaskDescription (task: Task, newTaskDescription: String): String
+    fun setTaskName(newTaskName: String): String
     {
-        if((newTaskDescription != null) && (newTaskDescription.isEmpty()) && (!(newTaskDescription.equals(task.taskDescription))))
-        {
-            task.taskDescription = newTaskDescription;
-        }
-        return task.taskDescription;
+        this.taskName = newTaskName
+        return taskName
     }
 
-    fun setTaskPriorityLevel(task: Task, newTaskPriorityLevel: Int): Int
+    fun setTaskDescription (newTaskDescription: String): String
     {
-        if((newTaskPriorityLevel != null) && (newTaskPriorityLevel > 0) && (newTaskPriorityLevel != task.taskPriorityLevel))
-        {
-            task.taskPriorityLevel = newTaskPriorityLevel
-        }
-        return task.taskPriorityLevel;
+        this.taskDescription = newTaskDescription
+        return taskDescription
     }
 
-    fun setTaskLocation(task: Task, newTaskLocation: Int): Int
+    fun setTaskPriorityLevel(newTaskPriorityLevel: Int): Int
     {
-        if((newTaskLocation != null) && (newTaskLocation > 0) && (newTaskLocation != task.taskLocation))
-        {
-            task.taskLocation = newTaskLocation;
-        }
-        return task.taskLocation;
-    }
-
-    fun setNotificationSettings(task: Task, changedNotificationSettings: Boolean): Boolean
-    {
-        if(task.notificationSettingsEnabled != changedNotificationSettings)
-        {
-            task.notificationSettingsEnabled = changedNotificationSettings;
-        }
-        return task.notificationSettingsEnabled;
+        this.taskPriorityLevel = newTaskPriorityLevel
+        return taskPriorityLevel
     }
 }

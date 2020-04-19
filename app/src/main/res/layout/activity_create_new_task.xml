@@ -38,15 +38,23 @@
                 android:background="@drawable/back_btn"
                 android:onClick="goBackToHome"/>
 
-            <ImageView
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_alignWithParentIfMissing="false"
-                android:layout_alignParentRight="true"
-                android:layout_centerInParent="true"
-                android:clickable="true"
-                android:contentDescription="@string/todo"
-                android:src="@drawable/more_btn" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="20dp">
+
+            <EditText
+                android:id="@+id/etTaskName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="New Task"
+                android:textColor="#000000"
+                android:textSize="15sp" />
 
         </RelativeLayout>
 
@@ -54,27 +62,84 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="1dp"
             android:layout_marginRight="20dp">
 
-            <TextView
+            <EditText
+                android:id="@+id/etTaskDescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:text="New Task"
+                android:text="Task Description"
                 android:textColor="#000000"
-                android:textSize="38sp" />
+                android:textSize="15sp" />
 
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="center"
+            android:paddingTop="1dp">
+
+            <RadioGroup
+                android:id="@+id/rgPriority"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="#F2DD2D59"
+                android:paddingTop="1dp">
+                <RadioButton
+                    android:id="@+id/rdoHighPriority"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="High" />
+                <RadioButton
+                    android:id="@+id/rdoMediumPriority"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Medium" />
+                <RadioButton
+                    android:id="@+id/rdoLowPriority"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Low"
+                    android:textColor="#000000"
+                    />
+            </RadioGroup>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="1dp"
+            android:gravity="center">
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:background="#F2DD2D59"
+                >
+            </Button>
+        </RelativeLayout>
+        <!--<RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:alignmentMode="alignMargins"
             android:orientation="horizontal"
-            android:paddingTop="25dp">
+            android:paddingTop="1dp">-->
 
-            <androidx.cardview.widget.CardView
+<!--            <androidx.cardview.widget.CardView
                 android:layout_width="95dp"
                 android:layout_height="95dp"
                 android:layout_gravity="left"
@@ -106,7 +171,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="High Priority"
+                android:text="Medium Priority"
                 android:layout_margin="8dp"
                 android:gravity="center"
                 android:textAlignment="center"/>
@@ -130,10 +195,10 @@
                     android:gravity="center"
                     android:textAlignment="center"/>
 
-            </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>-->
 
 
-        </RelativeLayout>
+<!--        </RelativeLayout>-->
 
 
         <!--        <RelativeLayout-->
